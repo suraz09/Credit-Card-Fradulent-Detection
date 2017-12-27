@@ -21,6 +21,8 @@ def predictSVM():
 	return clf.score(X_test, y_test)
 
 #Data is in pickled format
+card_data = pd.read_csv('creditcard.csv')
+card_data.to_pickle('card.pickle')
 card_data = pd.read_pickle('card.pickle')
 
 processData()
